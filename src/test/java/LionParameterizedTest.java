@@ -1,15 +1,10 @@
 import com.example.Feline;
 import com.example.Lion;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
-import static org.junit.Assert.assertEquals;
 
-import java.util.List;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 
@@ -29,21 +24,13 @@ public class LionParameterizedTest {
     public static Object[] getAnimalGender() {
         return new Object[][]{
                 {"Самец", true},
-                {"Самка", false}
+                {"Самка", false},
         };
     }
 
-    @Before
-    public void init() {
-        MockitoAnnotations.openMocks(this);
-    }
-
     @Test
-    public void getKittens () throws Exception {
+    public void doesHaveManeTest () throws Exception {
         Lion lion = new Lion(gender, new Feline());
         assertEquals(result, lion.doesHaveMane());
     }
-
-
-
 }

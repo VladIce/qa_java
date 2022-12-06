@@ -1,5 +1,6 @@
 import com.example.Animal;
 import com.example.Feline;
+import com.example.Lion;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -9,6 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -32,8 +34,7 @@ public class FelineTest {
 
     @Test
     public void getKittens() {
-        when(feline.getKittens()).thenReturn(2);
-        assertEquals(2, feline.getKittens());
+        assertEquals(0, feline.getKittens());
     }
 }
 
