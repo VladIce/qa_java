@@ -18,7 +18,7 @@ import static org.junit.Assert.assertEquals;
 public class LionTest {
 
     @Mock
-    Lion lion;
+    Feline feline;
 
     @Test
     public void throwExceptionTest() {
@@ -29,9 +29,12 @@ public class LionTest {
     }
 
     @Test
-    public void getKittens()  {
-        when(lion.getKittens()).thenReturn(123);
+    public void getKittensTest() throws Exception {
+        Lion lion = new Lion("Самка", feline);
+        when(feline.getKittens()).thenReturn(123);
         assertEquals(123, lion.getKittens());
+        // P.S: спасибо за совет!
+
 
     }
 }

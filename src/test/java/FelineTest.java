@@ -27,13 +27,13 @@ public class FelineTest {
     }
 
     @Test
-    public void getFamily() {
+    public void getFamilyTest() {
         Feline feline = new Feline();
         assertEquals("Кошачьи", feline.getFamily());
     }
 
     @Test
-    public void getKittens() {
+    public void getKittensTest() {
         assertEquals(0, feline.getKittens());
     }
 }
